@@ -27,7 +27,7 @@ MovieSchema.pre('save', function(next) {
    var movie = this;
 
    if(movie.cast.length < 3) {
-       console.log("NOT ENOUGH CAST MEMBERS");
+       console.log("NOT ENOUGH CAST MEMBERS ");
        var error = new ValidationError(this);
        error.errors.movie = new ValidatorError('Movies must have at least three cast members to be added to the database');
        next(error);
